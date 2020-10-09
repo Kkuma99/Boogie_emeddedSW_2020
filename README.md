@@ -82,11 +82,33 @@
   
   ## 📝Robot Arm Algorithm
   ### for raspberry pi
-  [RPi launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
+  roslaunch turtlebot3_bringup turtlebot3_robot.launch: [RPi launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
+  <br>
+  
+  `터틀봇 구동을 위한 오픈 소스 활용`
+  
+  참고: http://wiki.ros.org/turtlebot3_bringup
   
   ### main (host)
-  [Host PC launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
- 
+  [Host PC launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/Master/turtlebot3_manipulation/turtlebot3_manipulation_gui)
+   <br>
+  
+  `터틀봇 및 오픈 매니퓰레이터 구동을 위한 오픈 소스 활용`
+  
+  참고: https://github.com/ROBOTIS-GIT/turtlebot3_manipulation
+  
+   <details>
+<summary><span style="color:blue"> 알고리즘 설명 (요약)</span></summary>
+
+```
+① ROS 메시지 통신을 이용하여 Jetson으로부터 바코드 데이터를 전송받는다. 
+② 이때 데이터가 계속해서 들어오는 경우 중복을 방지하기 위해서 중복 검사를 한다. 주소지의 형태로 예를 들어 A00이면 ‘A’,‘0’,‘0’ 이런 식으로 string 데이터가 들어오게 되는데 각각의 문자열을 원래 가지고 있던 배열과 비교를 한다. 만약 각각의 문자열 중 하나라도 다르게 된다면 다른 주소지이므로 그 데이터를 배열에 저장하고 Queue에 해당 데이터를 push한다. 즉 Queue에서는 반복되는 데이터 없이 주소지를 저장을 하여 추후 매니퓰레이터 제어에 사용되게 된다.
+③ 기존에 GUI를 통하여 데이터를 전달받던 알고리즘을 변경하여 지정된 위치로 Open Manipulator를 제어할 수 있도록 함수를 사용한다. 원본 함수의 경우에는 GUI 창이 틀어지면서 home pose / init pose / gripper open / gripper close 외에 나머지는 xyz의 데이터 혹은 각각의 조인트의 값을 숫자로 입력하여 그 값을 전달해주는 형식으로 로봇팔을 조종한다. 현재 알고리즘에서는 거기서 사용되는 함수를 변경을 하여 이를 gui 입력없이 직접 사용하는 형식으로 변경하였다. 각 배송지 별로 분류하기 위해 로봇팔이 이동해야 하는 위치를 확인하여 이를 리스트로 저장을 하고 그 값을 조건에 따라 전달하여 함수가 실행되도록 한다. float a[4] = {0.550, 0.500, -0.100, 0.500}; 이러한 식으로 저장을 하여 후에 함수에서각각의 조인트 값을 저 리스트의 값으로 실행을 하게 된다.
+④ 퍼블리셔 서브스크라이버 함수를 통하여 주소지 데이터가 계속적으로 전달이 되고 반복되지 않는 값이 Queue에 쌓이는 동안 로봇팔은 산발적으로 움직이는 것은 아니다.상자가 컨베이어 벨트 초반부분에서 적재 알고리즘을 통해 데이터가 전달이 되지만 로봇팔이 이동을하는 컨베이어 벨트 끝부분까지 도착한 것은 아니다. 상자가 컨베이어의 끝부분에 도달하였는지 확인하기 위해서 OpenCV를 이용하여 카메라로상자를 인식한다. 특정 위치에서 상자가 인식되면 플래그를 바꾸고 로봇팔 제어 함수를 호출한다. 
+
+```
+</details>
+
 ---
  # ➕ 추후 활용방안
  
