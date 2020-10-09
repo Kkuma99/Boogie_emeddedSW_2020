@@ -12,7 +12,7 @@
  - 진행 사항 참고: https://kkuma99.github.io/Boogie/
  
  ---
- # ✅ Needed (Hw/Sw architecture)
+ # ✅ Needed (architecture)
  
  | `Development Environment` | OS | ROS version | else |
  | --- | --- | --- | --- |
@@ -25,9 +25,9 @@
  ---
   # ✅ src
   
+  [smart_logi_system_jetson.py](https://google.com, "google link")
   
-  
- 
+  [RPi launch](https://google.com, "google link")
  
 ---
 
