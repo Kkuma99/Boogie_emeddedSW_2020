@@ -14,7 +14,7 @@
  ---
  # ✅ Needed (architecture)
  
- | `Development Environment` | OS | ROS version | else |
+ | `Development Environment` | `OS` | `ROS version` | `else` |
  | --- | --- | --- | --- |
  | Jetson TX2 | Jetpack 3.3.1 - Ubuntu 16.04 | ROS Kinetic | OpenCV 3.4.6, pyzbar, matplotlib, SSH |
  | Raspberry Pi 3 | Raspbian | ROS Kinetic | SSH |
@@ -25,9 +25,16 @@
  ---
   # ✅ src
   
+  ## 📝Loading Algorithm
   [smart_logi_system_jetson.py](https://google.com, "google link")
   
-  [RPi launch](https://google.com, "google link")
+  
+  ## 📝Robot Arm Algorithm
+  ### for raspberry pi
+  [RPi launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
+  
+  ### main (host)
+  [RPi launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
  
 ---
 
