@@ -69,7 +69,7 @@
   [Host PC launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
  
 ---
- # ➕ 추후 사용 용도
+ # ➕ 추후 활용방안
  
  - 택배 회사의 물류 상하차에 활용
  ```    
@@ -85,3 +85,6 @@
  ```
  많은 물품을 보관해야 하는 대형 창고나 물품 보관 서비스 업체에서는 제한되어있는 규모의 공간에 최대한 많은 물품을 보관하는 것이 가장 이득이다. 크기에 따라 배치를 결정해주는 시스템을 여기에 적용할 수 있다.
  ```
+
+---
+ 이 후에도 다양한 개발 아이디어를 적용하여 작품을 발전시킬 계획입니다. 감사합니다.
