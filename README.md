@@ -2,10 +2,14 @@
 
 # ✅ 참가정보
  - 팀명: Boogie
+ - 작품명: Logi Boogie - 스마트 물류 시스템
  - 팀원: 강민지, 권미경
- - 2020년 임베디드 소프트웨어 경진대회 (smart things - 팀번호)
- - 개요: 간단한 작품 설명
- - 
+ - 2020년 임베디드 소프트웨어 경진대회 (smart things 부문 - 5024)
+ 
+ <
+ 
+ - 주제: Turtlebot3 Waffle Pi와 Open Manipulator를 이용한 스마트 물류 시스템 제어 로봇 제작
+ - 개요: 
  
  ---
  # ✅ Needed (Hw/Sw architecture)
