@@ -65,7 +65,7 @@ int main(int argc, char **argv) {
 
     while(1){
                 // VIDEO
-/*
+
 		cap >> img_color;
 		if (img_color.empty()) {
 			break;
@@ -108,7 +108,7 @@ int main(int argc, char **argv) {
 		imshow("Manipulator", img_color);
 		if(waitKey(1) & 0xFF == 27)
 			break;
-*/
+
 
 
                 // COMMUNICATION 
@@ -182,8 +182,8 @@ int main(int argc, char **argv) {
 		    flag=0;
                     continue;
                 }
-//	}
-//	flag=0;
+	}
+	flag=0;
     }
     int result = app.exec();
     ros::waitForShutdown();
