@@ -14,6 +14,13 @@
  ---
  # ✅ Needed (Hw/Sw architecture)
  
+ | `Development Environment` | OS | ROS version | else |
+ | --- | --- | --- | --- |
+ | Jetson TX2 | Jetpack 3.3.1 - Ubuntu 16.04 | ROS Kinetic | OpenCV 3.4.6, pyzbar, matplotlib, SSH |
+ | Raspberry Pi 3 | Raspbian | ROS Kinetic | SSH |
+ | HOST PC | Ubuntu 16.04 | ROS Kinetic | SSH, OpenCV 3.4.6, GCC compiler |
+ 
+ 다음과 같은 개발환경을 통하여 현재 프로젝트를 진행하였다.
  
  ---
   # ✅ src
