@@ -6,7 +6,7 @@
  - 팀원: 강민지, 권미경
  - 2020년 임베디드 소프트웨어 경진대회 (smart things 부문 - 5024)
  
- <
+ <br>
  
  - 주제: Turtlebot3 Waffle Pi와 Open Manipulator를 이용한 스마트 물류 시스템 제어 로봇 제작
  - 개요: 
