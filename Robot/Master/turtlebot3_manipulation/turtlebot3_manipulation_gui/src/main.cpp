@@ -128,7 +128,7 @@ int main(int argc, char **argv) {
 		ros::AsyncSpinner spinner(0);
 		spinner.start(); // for multithread
 
-//	if(flag){
+	if(flag){
 		if(q.front()==A){
                     std::cout << "A start\n";
 		    usleep(2300000);
