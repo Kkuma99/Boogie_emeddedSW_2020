@@ -1,6 +1,6 @@
 # Boogie_emeddedSW_2020
 
-# ✅ 참가정보
+# ➕ 참가정보
  - 2020년 임베디드 소프트웨어 경진대회 (smart things 부문 - 5024)
  - 팀명: Boogie
  - 작품명: Logi Boogie - 스마트 물류 시스템
@@ -12,7 +12,7 @@
  - 진행 사항 참고: https://kkuma99.github.io/Boogie/
  
  ---
- # ✅ Needed (architecture)
+ # ➕ Needed (architecture)
  
  | `Development Environment` | `OS` | `ROS version` | `else` |
  | --- | --- | --- | --- |
@@ -23,7 +23,30 @@
  다음과 같은 개발환경을 통하여 현재 프로젝트를 진행하였다.
  
  ---
-  # ✅ src
+ # ➕ System Process
+ 
+ 다양한 개발환경 및 보드를 같이 사용하기 때문에 그에 따라 코드를 한번에 실행하지 않고 여러 개의 통합 소스 파일들을 실행하게 된다.
+ 그에 따라 소스코드 실행 방법을 정리해두었다.
+ 
+ <details>
+<summary><span style="color:skyblue">📝실행 명령어 (요약)</span></summary>
+
+```
+1. roscore : host pc에서 192.168.0.18로 실행
+
+2. python3 smart_logi_system_jetson.py : Jetson TX2에서 실행
+
+3. roslaunch turtlebot3_bringup turtlebot3_robot.launch: RPi에서 실행 ( bash에 마스터 선언 확인)
+
+4. roslaunch turtlebot3_manipulation_bringup turtlebot3_manipulation_bringup.launch : host pc에서 실행
+
+5. roslaunch turtlebot3_manipulation_gui turtlebot3_manipulation_gui.launch : host pc에서 실행
+
+```
+</details>
+ 
+ ---
+  # ➕ src
   
   ## 📝Loading Algorithm
   [smart_logi_system_jetson.py](https://google.com, "google link")
@@ -34,24 +57,7 @@
   [RPi launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
   
   ### main (host)
-  [RPi launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
+  [Host PC launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/SBC/turtlebot3_manipulation/turtlebot3_manipulation_bringup)
  
 ---
 
-우리 소스들 나중에 링크로 해서 각 위치에 넘어가게 하자
-
-혹시 추가로 설명하려는데 긴게 있으면 
-
-<details>
-<summary><span style="color:blue">📝주요 명령어들 (필요하면 클릭해서 보세요)</span></summary>
-
-```
-CUDA_VISIBLE_DEVICES=1 python3 train.py --cfg cfg/cfg쓸거 --data 데이터위치 --transfer --resume --xywh
-
-CUDA_VISIBLE_DEVICES=1 : 회사 내 GPU 사용할 때, 0~3까지의 숫자를 사용할 수 있고 주로 숫자를 안붙이고 사용하게 되면 default가 0이기 때문에 최대한 0은 피해서 사용해주세요
-
-학습 시킬 때: train.py를 돌리는 데 옵션이 붙어 있습니다. -h 를 치게 되면 옵션에서 뭘 써야하는지 알 수 있습니다.
-```
-</details>
-
-이거 형식에 쓰면 될듯
