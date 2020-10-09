@@ -90,7 +90,7 @@
   참고: http://wiki.ros.org/turtlebot3_bringup
   
   ### main (host)
-  [Host PC launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/Master/turtlebot3_manipulation/turtlebot3_manipulation_gui)
+  roslaunch turtlebot3_manipulation_gui turtlebot3_manipulation_gui.launch: [Host PC launch](https://github.com/Kkuma99/Boogie_emeddedSW_2020/tree/master/Robot/Master/turtlebot3_manipulation/turtlebot3_manipulation_gui)
    <br>
   
   `터틀봇 및 오픈 매니퓰레이터 구동을 위한 오픈 소스 활용`
