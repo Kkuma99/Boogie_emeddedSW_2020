@@ -1,4 +1,4 @@
-# Boogie_emeddedSW_2020
+# 📦Logi Boogie - 스마트 물류 시스템
 
 # ➕ 참가정보
  - 2020년 임베디드 소프트웨어 경진대회 (smart things 부문 - 5024)
@@ -29,7 +29,7 @@
  그에 따라 소스코드 실행 방법을 정리해두었다.
  
  <details>
-<summary><span style="color:skyblue">📝실행 명령어 (요약)</span></summary>
+<summary><span style="color:skyblue">✏️실행 명령어 (요약)</span></summary>
 
 ```
 1. roscore : host pc에서 192.168.0.18로 실행
