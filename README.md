@@ -57,7 +57,7 @@
   # ➕ Source code
   
   ## 📝Loading Algorithm
-  적재 알고리즘: [smart_logi_system_jetson.py](https://google.com, "google link")
+  적재 알고리즘: [smart_logi_system_jetson.py](https://github.com/Kkuma99/Boogie_emeddedSW_2020/blob/master/Load_JetsonTX2/smart_logi_system_jetson.py)
   <br>
   
   `상자의 정보를 수집하고 적재 순서를 계산`
