@@ -138,7 +138,7 @@ def calculate_loading_order(NUM_LOCAL, NUM_BOX, TRUCK_L, TRUCK_W, TRUCK_H, input
 
     ## Loading Box
     for i in range(NUM_LOCAL):  # 각 지역별로 수행
-        floor = 0	# 현재 적재하고 있는 층수
+        floor = 0   # 현재 적재하고 있는 층수
         sum_num_box += NUM_BOX[i]   # 앞 지역부터 상자의 개수를 더함
 
         while True:
@@ -168,7 +168,7 @@ def calculate_loading_order(NUM_LOCAL, NUM_BOX, TRUCK_L, TRUCK_W, TRUCK_H, input
 
             # 상자를 적재할 위치 계산
             min_L = TRUCK_L     # 적재된 상자들이 차지한 가장 작은 길이(최소값을 찾기 위해 큰 값으로 초기화)
-            measureMode = 0	# 측정 모드 플래그: 비어있는 공간의 너비를 측정하고 있으면 1, 아니면 0
+            measureMode = 0   # 측정 모드 플래그: 비어있는 공간의 너비를 측정하고 있으면 1, 아니면 0
             for j in range(TRUCK_L):    # 길이 방향으로 검사
                 count_W = 0
                 for k in range(TRUCK_W):    # 너비 방향으로 검사
@@ -190,7 +190,7 @@ def calculate_loading_order(NUM_LOCAL, NUM_BOX, TRUCK_L, TRUCK_W, TRUCK_H, input
                     break   # j에 대한 for 문 탈출
 
             # 적재할 상자 선택(5가지 조건 확인)
-            max_box_W = 0	# count_W 너비 안에 들어갈 수 있는 최대 너비의 상자 너비
+            max_box_W = 0   # count_W 너비 안에 들어갈 수 있는 최대 너비의 상자 너비
             for j in range(NUM_BOX[i]):
                 cannot_load = 0
                 if check[i][j] == 0 and j in inputBox[i]:
@@ -278,6 +278,8 @@ def calculate_loading_order(NUM_LOCAL, NUM_BOX, TRUCK_L, TRUCK_W, TRUCK_H, input
     plt.draw()  # 마지막으로 plot
     plt.pause(60)   # 1분간 유지
 
+# ------------------------------------------------------------ main ------------------------------------------------------------
+
 # Number of locals and boxes
 NUM_LOCAL = 3
 NUM_BOX = [0, 0, 0]  # 각 지역별 상자 개수
@@ -328,6 +330,7 @@ while True:
 
     cv2.imshow('LOGI', result)  # 화면에 표시
     if cv2.waitKey(1) & 0xFF == 27:  # 1초 단위로 update되며, ESC키를 누르면 탈출하여 종료
+        send_data_to_host("END")    # 종료 상태 전송
         break
 
 # 영상처리에 사용된 메모리를 해제
