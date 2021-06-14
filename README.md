@@ -19,7 +19,7 @@
 
  - 진행 사항 참고: https://kkuma99.github.io/Boogie/
  - 개발영상:
-[![Video Label](http://img.youtube.com/vi/anbjpytdbVc/0.jpg)](https://youtu.be/anbjpytdbVc)
+[![Video Label](http://img.youtube.com/vi/anbjpytdbVc/1.jpg)](https://youtu.be/anbjpytdbVc)
  
  ---
  # ➕ Needed (architecture)
